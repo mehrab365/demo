@@ -7,6 +7,7 @@ import {browserHistory} from 'react-router';
 
 class CoursesPage extends React.Component{
   constructor(props, context){
+
     super(props, context);
     this.redirectToCoursePage = this.redirectToCoursePage.bind(this);
   }
@@ -20,6 +21,7 @@ class CoursesPage extends React.Component{
   }
 
   render(){
+
     const {courses} = this.props;
     return(
       <div>
@@ -39,12 +41,14 @@ CoursesPage.propTypes ={
 };
 
 function mapStateToProps(state, ownProps) {
+
   return{
     courses: state.courses
   };
 }
 
 function mapDispatchToProps(dispatch) {
+
   return{
     // createCourse: course => dispatch(courseActions.createCourse(course))
     actions: bindActionCreators(courseActions, dispatch)
